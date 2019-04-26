@@ -34,7 +34,8 @@ module.exports = {
       postcss: {
         plugins: [
           require('postcss-px2rem')({
-            remUnit: 100
+            // 依据750px设计稿，取1rem=75px，html元素的宽度可以设置为width: 10rem，于是html的font-size=deviceWidth / 10
+            remUnit: 75
           })
         ]
       }
